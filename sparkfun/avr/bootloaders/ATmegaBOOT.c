@@ -132,10 +132,10 @@
 /* if monitor functions are included, LED goes on after monitor was entered */
 #if defined __AVR_ATmega128__ || defined __AVR_ATmega1280__ || defined __AVR_ATmega128RFA1__
 /* Onboard LED is connected to pin PB7 (e.g. Crumb128, PROBOmega128, Savvy128, Arduino Mega) */
-#define LED_DDR  DDRB
-#define LED_PORT PORTB
-#define LED_PIN  PINB
-#define LED      PINB7
+#define LED_DDR  DDRG
+#define LED_PORT PORTG
+#define LED_PIN  PING
+#define LED      PING0
 #else
 /* Onboard LED is connected to pin PB5 in Arduino NG, Diecimila, and Duomilanuove */ 
 /* other boards like e.g. Crumb8, Crumb168 are using PB2 */
