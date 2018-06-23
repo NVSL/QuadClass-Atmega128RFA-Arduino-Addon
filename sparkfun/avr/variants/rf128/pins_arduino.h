@@ -26,6 +26,7 @@
 	This version of pins_arduino.h is for the Zigduino r1
 	Pierce Nichols 2011 Oct 11
 	Amended for the SparkFun ATmega128RFA1 -- Jim Lindblom 2013 Jun 29
+	Amended for the UCSD Quadcopter class -- Steven Swanson 2018 Jun 22
 */
 
 #ifndef Pins_Arduino_h
@@ -170,6 +171,8 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 	PF	, // PF 7 ** 33 ** A7 / D33
 	PB	, // PB 6 ** 34 ** D34 / LED1 / LED / PWM
 	PB	, // PB 7 ** 35 ** D35 / LED2 / PWM
+	PG	, // PG 3 ** 36 ** D36 
+	PG	, // PG 4 ** 37 ** D37 
 };
 
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
@@ -211,6 +214,8 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 	_BV( 7 )	, // PF 7 ** 33 ** A7 / D33	
 	_BV( 6 )	, // PB 6 ** 34 ** D34 / LED1 / LED / PWM
 	_BV( 7 )	, // PB 7 ** 35 ** D35 / LED2 / PWM
+	_BV( 3 )	, // PG 3 ** 36 ** D36	
+	_BV( 4 )	, // PG 4 ** 37 ** D37	
 };
 
 // !!!
@@ -220,13 +225,13 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER	, // PE 0 ** 0 ** USART0_RX	
 	NOT_ON_TIMER	, // PE 1 ** 1 ** USART0_TX	
 	NOT_ON_TIMER	, // PE 2 ** 2 ** D2
-	TIMER3A			, // PE 3 ** 3 ** D3 / PWM
-	TIMER3B			, // PE 4 ** 4 ** D4 / PWM
-	TIMER3C			, // PE 5 ** 5 ** D5 / PWM
+	TIMER3A		, // PE 3 ** 3 ** D3 / PWM
+	TIMER3B		, // PE 4 ** 4 ** D4 / PWM
+	TIMER3C		, // PE 5 ** 5 ** D5 / PWM
 	NOT_ON_TIMER	, // PE 6 ** 6 ** D6
 	NOT_ON_TIMER	, // PE 7 ** 7 ** D7
-	TIMER1A			, // PB 5 ** 8 ** D8 / PWM
-	TIMER2A			, // PB 4 ** 9 ** D9 / PWM
+	TIMER1A		, // PB 5 ** 8 ** D8 / PWM
+	TIMER2A		, // PB 4 ** 9 ** D9 / PWM
 	NOT_ON_TIMER	, // PB 0 ** 10 ** D10 / SPI_SSN
 	NOT_ON_TIMER	, // PB 2 ** 11 ** D11 / SPI_MOSI
 	NOT_ON_TIMER	, // PB 3 ** 12 ** D12 / SPI_MISO
@@ -236,7 +241,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER	, // PG 0 ** 16 ** D16
 	NOT_ON_TIMER	, // PG 1 ** 17 ** D17	
 	NOT_ON_TIMER	, // PG 2 ** 18 ** D18	
-	TIMER0B			, // PG 5 ** 19 ** D19 / PWM
+	TIMER0B		, // PG 5 ** 19 ** D19 / PWM
 	NOT_ON_TIMER	, // PD 2 ** 20 ** D20 / USART1_RX
 	NOT_ON_TIMER	, // PD 3 ** 21 ** D21 / USART1_TX
 	NOT_ON_TIMER	, // PD 4 ** 22 ** D22
@@ -251,8 +256,10 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER	, // PF 5 ** 31 ** A5 / D31	
 	NOT_ON_TIMER	, // PF 6 ** 32 ** A6 / D32	
 	NOT_ON_TIMER	, // PF 7 ** 33 ** A7 / D33	
-	TIMER1B			, // PB 6 ** 34 ** D34/ PWM
-	TIMER1C			, // PB 7 ** 35 ** D35 / PWM
+	TIMER1B		, // PB 6 ** 34 ** D34/ PWM
+	TIMER1C		, // PB 7 ** 35 ** D35 / PWM
+	NOT_ON_TIMER	, // PG 3 ** 36 ** D36	
+	NOT_ON_TIMER	, // PG 4 ** 37 ** D37
 };	
 
 #endif
