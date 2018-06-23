@@ -6,6 +6,8 @@
 /*                                                        */
 /* ATmegaBOOT.c                                           */
 /*                                                        */
+/* 20180622: Tweaked support for ATmega128RFA1 to free up */
+/*           a PWM pin.                                   */
 /* 20130613: Added support for ATmega128RFA1              */
 /* 20090308: integrated Mega changes into main bootloader */
 /*           source by D. Mellis                          */
