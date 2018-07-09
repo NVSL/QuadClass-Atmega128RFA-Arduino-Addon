@@ -36,7 +36,7 @@
 
 #define NUM_DIGITAL_PINS            29
 #define NUM_ANALOG_INPUTS           8
-#define analogInputToDigitalPin(p)  ((p < 8) ? (p) + 26 : -1)
+#define analogInputToDigitalPin(p)  ((p < NUM_ANALOG_INPUTS) ? (p) + 26 : -1)
 #define digitalPinHasPWM(p)         ((p) == 3 ||(p) == 4 ||(p) == 5 ||(p) == 8 ||(p) == 9 ||(p) == 19 ||(p) == 34 || (p) == 35)
 
 const static uint8_t SS   = 10;
@@ -50,6 +50,7 @@ const static uint8_t LED = 16;
 const static uint8_t LED1 = 16;
 const static uint8_t LED2 = 17;
 
+#if(0)
 const static uint8_t A0 = 26;
 const static uint8_t A1 = 27;
 const static uint8_t A2 = 28;
@@ -58,6 +59,16 @@ const static uint8_t A4 = 30;
 const static uint8_t A5 = 31;
 const static uint8_t A6 = 32;
 const static uint8_t A7 = 33;
+#endif
+
+const static uint8_t A0 = 0; // 26
+const static uint8_t A1 = 1; // 27
+const static uint8_t A2 = 2; // 28
+const static uint8_t A3 = 3; // 29
+const static uint8_t A4 = 4; // 30
+const static uint8_t A5 = 5; // 31
+const static uint8_t A6 = 6; // 32
+const static uint8_t A7 = 7; // 33
 
 // A majority of the pins are NOT PCINTs, SO BE WARNED (i.e. you cannot use them as receive pins)
 // Only pins available for RECEIVE (TRANSMIT can be on any pin):
