@@ -47,6 +47,7 @@ const static uint8_t SCK  = 13;
 const static uint8_t SDA = 14;
 const static uint8_t SCL = 15;
 const static uint8_t LED = 16;
+const static uint8_t LED_BUILTIN = 16;
 const static uint8_t LED1 = 16;
 const static uint8_t LED2 = 17;
 
@@ -81,7 +82,7 @@ const static uint8_t A7 = 7; // 33
 
 #define digitalPinToPCMSK(p)    ( ((((p) >= 8) && ((p) <= 13)) || ((p) == 20)) ? (&PCMSK0) : \
                                 ( ((p) == 7) ? (&PCMSK1) : \
-                                ((uint8_t *)0) ) )
+				  ((uint8_t *)0) ) )
 
 #define digitalPinToPCMSKbit(p) ( ((p) == 7) ? 0 : \
                                 ( ((p) == 8) ? 4 : \
@@ -91,7 +92,7 @@ const static uint8_t A7 = 7; // 33
                                 ( ((p) == 12) ? 3 : \
                                 ( ((p) == 13) ? 1 : \
                                 ( ((p) == 20) ? 2 : \
-                                0 ) ) ) ) ) )
+				  0 ) ) ) ) ) )))
 
 #ifdef ARDUINO_MAIN
 
